@@ -1,5 +1,7 @@
 import pyfiglet
-from rich.console import Console
+from rich.console import Console 
+import time
+from tqdm import tqdm
 
 
 ascii_art = pyfiglet.figlet_format("Hello python class!")
@@ -13,3 +15,9 @@ for font in fonts:
 console = Console()
 ascii_art = pyfiglet.figlet_format("Colorful!")
 console.print(ascii_art, style="bold blue")
+
+
+for i in range(1, 6):
+    print(pyfiglet.figlet_format(f"Step {i}", font="isometric1"))
+    time.sleep(0.5)
+   
